@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <h1>Routing</h1>
       <p>
-        <Link to="/">Home</Link>
+        <Link to="/">Welcome</Link>
         {' | '}
         <Link to="/hello/1">Hello1</Link>
         {' | '}
@@ -22,12 +22,14 @@ function App() {
         <Link to="/hello/3">Hello3</Link>
         {' | '}
         <Link to="/hello/4">Hello4</Link>
+        {' | '}
+        <Link to="/hello/blue/red">Hello Blue Red</Link>
       </p>
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/Hello/:num">
+        <Route path="/Hello/:num/:text/:bg">
           <Hello />
         </Route>
       </Switch>
